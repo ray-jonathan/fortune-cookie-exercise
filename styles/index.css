@@ -2,11 +2,13 @@
 
 .output{
     display: flex;
+    align-content: center;
     justify-content: center;
 }
 
-.input{
+.input-style{
     display: flex;
+    align-content: center;
     justify-content: center;
 }
 
