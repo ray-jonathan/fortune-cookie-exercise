@@ -14,11 +14,12 @@ jokesFortunes = [
 
 const buttonForward = document.querySelector('[data-inputForward');
 const buttonBackward = document.querySelector('[data-inputBackward');
-const buttonBackward = document.querySelector('[data-inputBackward');
+const buttonRandom = document.querySelector('[data-inputRandom');
 const output = document.querySelector('[data-output');
 
 buttonForward.addEventListener("click", advanceJoke);
 buttonBackward.addEventListener("click", backJoke);
+buttonRandom.addEventListener("click", randomJoke);
 
 let count = 0;
 console.log(count);
@@ -45,6 +46,12 @@ function backJoke(){
     else{
         output.textContent = jokesFortunes[count];
     }
+    console.log(count);
+}
+// Create a random count
+function randomJoke(){
+    count = Math.floor(Math.random() * 10);
+    output.textContent = jokesFortunes[count];
     console.log(count);
 }
 
