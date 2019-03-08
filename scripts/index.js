@@ -12,13 +12,18 @@ jokesFortunes = [
     "Beauty:\n\tWhat's in your eye when you have a bee in your hand."
 ];
 
-const button = document.querySelector('[data-input');
+const buttonForward = document.querySelector('[data-inputForward');
+const buttonBackward = document.querySelector('[data-inputBackward');
+const buttonBackward = document.querySelector('[data-inputBackward');
 const output = document.querySelector('[data-output');
 
-button.addEventListener("click", advanceJoke);
+buttonForward.addEventListener("click", advanceJoke);
+buttonBackward.addEventListener("click", backJoke);
+
 let count = 0;
 console.log(count);
 
+// Looping forward buttonForward
 function advanceJoke(){
     count +=1;
     if (count > jokesFortunes.length - 1){
@@ -30,5 +35,18 @@ function advanceJoke(){
     }
     console.log(count);
 }
+// Looping backward buttonBackward
+function backJoke(){
+    count -=1;
+    if (count < 0){
+        count = jokesFortunes.length -1;
+        output.textContent = jokesFortunes[count];
+    }
+    else{
+        output.textContent = jokesFortunes[count];
+    }
+    console.log(count);
+}
 
+// Default joke on page
 output.textContent = jokesFortunes[0];

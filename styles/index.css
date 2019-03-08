@@ -2,16 +2,17 @@
 
 .output{
     display: flex;
-    align-content: center;
+    align-content: flex-end;
     justify-content: center;
 }
 
 .input-style{
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 body{
     background-image: url("../images/fortune-cookie.jpg");
+    background-size: 100%; 
 }
